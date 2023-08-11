@@ -1,0 +1,140 @@
+body{
+    background: #121418;
+    text-align: center;
+    /* font-family: sans-serif; */
+}
+h1{
+    color: blue;
+}
+.completed{
+    text-decoration: line-through;
+    color: gray;
+}
+.not{
+    text-decoration: none;
+}
+.todoContainer{
+    max-width: 400px;
+    margin: 100px auto;
+    background: rgb(212 240 245)	;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(212, 240, 245, 1);
+}
+.indexMain{
+    border: 1px solid   #121418;
+    box-shadow: 0 0 15px #121418;
+
+}
+.homeBody{
+    max-width: 400px;
+    margin: 100px auto;
+    background: rgb(212 240 245)	;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(212, 240, 245, 1);
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+}
+form > input{
+    width: 100%;
+    border: none;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+}
+form > input + input{
+    width: 100px;
+    border-radius: 0 20px 20px 0;
+}
+input{
+    border-radius: 20px;
+}
+.todoItem{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 9px;
+    padding: 8px;
+    margin-bottom: 5px;
+    background: rgb(255, 255, 255);
+    text-align: center;
+}
+li span:hover{
+    cursor: pointer;
+}
+ul{
+    padding: 0;
+    list-style-type: none;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    width: 40px;
+}
+
+.icons:hover, .btn:hover{
+    cursor: pointer;
+}
+
+.edit, .confirm{
+    color: limegreen;
+}
+
+.del, .cancel{
+    color: red;
+}
+
+.confirm {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(51, 212, 100);
+    margin-left: 5px;
+    max-height: 30px;
+    font-family: 'Edu TAS Beginner', sans-serif;
+    display: block;
+}
+
+.cancel {
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgb(223, 43, 43);
+    margin-left: 5px;
+    max-height: 30px;
+    font-family: 'Edu TAS Beginner', sans-serif;
+    display: block;
+}
+
+.homeBtn{
+    border: 1px solid rgb(212, 240, 245);
+    border-radius: 10%;
+    padding: 10px;
+    font-size: 20px;
+    margin: 10px;
+}
+
+/* Sign Up Page */
+.signupMain{
+    /* max-width: 400px; */
+    margin: 100px auto;
+    background: rgb(212 240 245)	;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(212, 240, 245, 1);
+}
+.signupMain form > input + input{
+    width: 100%;
+    border-radius: 0 20px 20px 0;
+}

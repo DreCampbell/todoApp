@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Todo App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Edu+TAS+Beginner:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    <main class="todoContainer">
+
+        <h2>Edit Task</h2>
+        <section class="todoItemContainer">
+            <ul>
+                <% todoTasks.forEach(task=> { %>
+                    <% if (task._id==idTask) { %>
+                        <li class="todoItem">
+                            <form action="/edit/<%= task._id %>" method="POST">
+                                <textarea rows="6" cols="32" name="todoItem"><%= task.todo %></textarea>
+                                <button type="submit"  data-url="/edit/<%task.todo%>" class="btn confirm">Confirm</button>
+                                <a href="/todos" class="cancel">Cancel</a>
+                            </form>
+                        </li>
+
+                        <% } else { %>
+                            <li class="todo-list-item">
+                                <span class="todoItem">
+                                    <%= task.todo %>
+                                    <div class="icons">
+                                        <a href="/edit/<%= task._id %>" class="edit">
+                                            <span class="fas fa-edit"></span>
+                                        </a>
+                                        <a href="/edit/remove/<%= task._id %>" class="remove">
+                                            <span class="fas fa-times del"></span>
+                                        </a>
+                                    </div>
+                                </span>
+                            </li>
+                            <% } %>
+                                <% }) %>
+            </ul>
+        </section>
+    </main>
+
+    <script src="/js/main.js"></script>
+    <script src="https://kit.fontawesome.com/4081cbc0e0.js" crossorigin="anonymous"></script>
+</body>
+</html

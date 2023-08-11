@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/4081cbc0e0.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main class="todoContainer">
+
+        <h1>To-Do List</h1>
+        <form action="/todos/createTodo" method='POST'>
+            <input type="text" placeholder="Enter Task" name='todoItem'>
+            <input class="btn" type="submit">
+        </form>
+
+        <h2><%= user.userName %> has <%= left %> things left to do.</h2>
+        <section class="todoItemContainer">
+            
+            <ul>
+                <% todos.forEach( task => { %>
+                    <li class='todoItem' data-id='<%=task._id%>'>
+                        <span class='<%= task.completed === true ? 'completed' : 'not'%>'><%= task.todo %></span>
+                        <div class="icons">
+                            <a href="/edit/<%=task._id%>" class="edit">
+                                <span class="fas fa-edit"></span>
+                            </a>
+                            <span class='fas fa-times del'></span>
+                        </div>
+                    </li>
+                <% }) %>    
+            </ul>
+            <a href="/logout">Logout</a>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+
+</body>
+</html>
